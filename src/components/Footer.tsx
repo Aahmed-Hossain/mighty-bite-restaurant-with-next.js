@@ -19,11 +19,11 @@ import React from 'react';
 import { FaReddit, FaFacebook, FaGithub } from "react-icons/fa";
 const Footer = () => {
     return (
-        <footer className="bg-fuchsia-50 dark:bg-gray-900">
+        <footer className="bg-fuchsia-50 dark:bg-gray-900 pt-8 lg:py-4">
         <div className="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
         <Link href={'/'} className='font-bold text-2xl text-red-500'> Mighty Bite Cafe</Link>
           <p className="text-sm text-gray-600 dark:text-gray-300">
-            © Copyright 2021. All Rights Reserved.
+            © Copyright 2021.All Rights Reserved.
           </p>
   
           <div className="flex -mx-2">
