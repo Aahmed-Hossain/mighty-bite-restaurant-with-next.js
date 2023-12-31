@@ -1,17 +1,3 @@
-// import mongoose from 'mongoose';
-
-// const connectMongoDB = async () => {
-//     console.log(process.env.MONGODB_URI );
-//     try {
-//         await mongoose.connect(process.env.MONGODB_URI as string);
-//         console.log("Connected to MongoDB");
-//     } catch (error) {
-//         console.error(error);
-//     }
-// };
-
-// export default connectMongoDB;
-
 import mongoose from 'mongoose'
 declare global {
   var mongoose: any // This must be a `var` and not a `let / const`

@@ -6,5 +6,5 @@ import CategoryModel from './../../../models/categories';
 export async function GET() {
     await dbConnect();
     const categories = await CategoryModel.find();
-    return NextResponse.json(categories );
+    return NextResponse.json(categories);
 };
