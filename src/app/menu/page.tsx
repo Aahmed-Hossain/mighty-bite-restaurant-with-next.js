@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Link from 'next/link'
 import { MenuType } from '@/types/types';
@@ -7,6 +8,7 @@ const getData = async()=>{
   return res.json();
 }
 const MenuPage = async() => {
+
   const menu:MenuType = await  getData();
   return (
     <div className='p-4 h-screen md:[calc(100vh - 6rem)]  flex flex-col md:flex-row lg:flex-row items-center my-auto'>
@@ -28,5 +30,6 @@ const MenuPage = async() => {
     </div>
   )
 }
-
 export default MenuPage;
+
+

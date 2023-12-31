@@ -3,9 +3,9 @@ import React from "react";
 import Menu from "./Menu";
 import CartIcon from "./CartIcon";
 import Image from "next/image";
+import UserLinks from "./UserLinks";
 
 const Navbar = () => {
-  const user = false;
   return (
     <div className="text-red-500 h-12 p-4 flex justify-between items-center border-b border-b-red-500 font-semibold">
       {/* left navlinks */}
@@ -32,11 +32,7 @@ const Navbar = () => {
           <span>123 456 78</span>
         </div>
         <div className="hidden md:flex gap-3">
-          {!user ? (
-            <Link href={"/login"}>Login</Link>
-          ) : (
-            <Link href={"/orders"}>Orders</Link>
-          )}
+          <UserLinks/>
           <CartIcon></CartIcon>
         </div>
       </div>
