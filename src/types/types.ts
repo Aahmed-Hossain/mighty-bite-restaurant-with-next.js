@@ -16,4 +16,13 @@ export type MenuType = {
     price: number;
     options?: { title: string; additionalPrice: number }[];
   };
+  
+  export type FeaturedProductType = {
+    _id: number;
+    title: string;
+    desc?: string;
+    img?: string;
+    price: number;
+    options?: { title: string; additionalPrice: number }[];
+  };
 

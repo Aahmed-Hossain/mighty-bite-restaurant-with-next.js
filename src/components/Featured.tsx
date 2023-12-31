@@ -1,14 +1,15 @@
-import { featuredProducts } from "@/data";
+// import { featuredProducts } from "@/data";
 // import { ProductType } from "@/types/types";
+import { FeaturedProductType } from "@/types/types";
 import Image from "next/image";
 import React from "react";
 
-// const getData = async()=>{
-//   const res = await fetch(`http://localhost:3000/api/products`,{cache:"no-store"})
-//   return res.json();
-// }
+const getData = async()=>{
+  const res = await fetch(`https://mighty-bite-server.vercel.app/featuredProducts`,{cache:"no-store"})
+  return res.json();
+}
 const Featured = async() => {
-  // const featuredProducts:ProductType[] = await getData();
+  const featuredProducts:FeaturedProductType[] = await getData();
 
   return (
     <div className="w-screen overflow-x-scroll text-red-500 "
@@ -24,7 +25,7 @@ const Featured = async() => {
         {
           featuredProducts.map(item =>(
           <div 
-            key={item.id}
+            key={item._id}
           className="w-screen h-screen  flex flex-col items-center justify-around px-3 py-2 hover:bg-fuchsia-50 transition-all duration-300 md:w-[50vw] lg:w-[33vw]"
         
           >
